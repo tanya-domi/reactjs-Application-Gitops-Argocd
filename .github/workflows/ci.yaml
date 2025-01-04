@@ -2,7 +2,7 @@ name: React.js CI
 
 on:
   pull_request:
-    branches: "master"
+    branches: "main"
 
 jobs:
   frontend-test:
@@ -43,7 +43,7 @@ jobs:
       - name: Analyze with SonarCloud
         uses: sonarsource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           projectBaseDir: quiz-app
@@ -265,3 +265,21 @@ jobs:
         with:
           file: kubernetes-manifest/
           args: --severity-threshold=high
+    
+  slack-notification:
+    if: always()
+    name: Slack Notification
+    needs: [backend-security, frontend-security, k8s-manifest-scan]
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_CHANNEL: github-actions-chennels
+        SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+        SLACK_MESSAGE: ':hammer_and_wrench: Triggered by ${{github.actor}}'
+        SLACK_TITLE: Information
+        
