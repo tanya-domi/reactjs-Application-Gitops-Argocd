@@ -1,4 +1,8 @@
-#Three-tier application deployment with DevSecOps principles on AWS using Kubernetes, GitOps, ArgoCD, and GitHub Actions.
+# Three-tier application deployment with DevSecOps principles on AWS using Kubernetes, GitOps, ArgoCD, and GitHub Actions.
+
+# Project Introduction:
+DevSecOps Kubernetes Project Guide: Learn to set up a robust Three-Tier architecture on AWS using Kubernetes (EKS) with DevOps best practices and security measures. 
+Gain hands-on experience in deploying, securing, and monitoring a scalable application.
 
 ![dude](https://github.com/user-attachments/assets/b7f28dfb-ad8a-4cac-a8dd-a3f768d02ae4)
 
@@ -17,10 +21,6 @@ Step 11: Deploy Quiz Application using ArgoCD.
 Step 12: Creating an A-Record in AWS Route 53 Using ALB DNS.
 Step 13: Clean up.
 Conclusion
-
-# Project Introduction:
-DevSecOps Kubernetes Project Guide: Learn to set up a robust Three-Tier architecture on AWS using Kubernetes (EKS) with DevOps best practices and security measures. 
-Gain hands-on experience in deploying, securing, and monitoring a scalable application.
 
 # Project Overview:
 In this project, we will cover the following key aspects:
