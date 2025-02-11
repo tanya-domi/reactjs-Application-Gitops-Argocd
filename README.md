@@ -27,7 +27,7 @@ In this project, we will cover the following key aspects:
 
 1. IAM User Setup: Create an AWS IAM user with required permissions.
 2. Infrastructure as Code (IaC): Use Terraform and AWS CLI to set up a Jumphost (EC2).
-3. GitHub Actions: Configure workflows with tools like Snyk, Docker, 4. SonarQube, Terraform, kubectl, AWS CLI, and Trivy.
+3. GitHub Actions: Configure workflows with tools like Snyk, Docker, SonarQube, Terraform, kubectl, AWS CLI, and Trivy.
 4. EKS Deployment: Use eksctl to create an Amazon EKS cluster.
 5. Load Balancer: Set up an AWS Application Load Balancer (ALB) for the cluster.
 6. DockerHub Repositories: Automatically create frontend and backend image repositories.
