@@ -99,7 +99,7 @@ eksctl utils associate-iam-oidc-provider --region=us-east-1 --cluster=quizapp-ek
 # Create Service Account
 eksctl create iamserviceaccount --cluster=quizapp-eks-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::<ACCOUNT-ID>:policy/AWSLoadBalancerControllerIAMPolicy --approve --region=us-east-1
 
-Run the below command to deploy the AWS Load Balancer Controller using Helm
+# Run the below command to deploy the AWS Load Balancer Controller using Helm
 
 sudo snap install helm --classic
 helm repo add eks https://aws.github.io/eks-charts
@@ -142,12 +142,12 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2
 
 To confirm argoCD pods are running. All pods must be running, to validate run the below command
 
-kubectl get pods -n argocd
+# kubectl get pods -n argocd
 
 # expose the argoCD server as LoadBalancer using the below command
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
-To access the argoCD, copy the LoadBalancer DNS and hit on your browser.
+# To access the argoCD, copy the LoadBalancer DNS and hit on your browser.
 
 we need to get the password for our argoCD server to perform the deployment.
 we need a pre-requisite which is jq. This has already been Installed or you can install it using the command below.
