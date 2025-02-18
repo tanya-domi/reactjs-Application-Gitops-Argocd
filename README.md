@@ -7,19 +7,33 @@ Gain hands-on experience in deploying, securing, and monitoring a scalable appli
 ![dude](https://github.com/user-attachments/assets/b7f28dfb-ad8a-4cac-a8dd-a3f768d02ae4)
 
 Step 1: SSH Exchange between local computer and Github account.
+
 Step 1: CREATE AWS Resources.
+
 Step 2: Install Terraform & AWS CLI.
+
 Step 3: Deploy the Jumphost Server(EC2) using Terraform on Github Actions.
+
 Step 4: Configure the Jumphost.
+
 Step 5: Setup Docker Repositories to allow image push for Frontend & Backend images.
+
 Step 6: Configure Sonar Cloud for our app_code Pipeline.
+
 Step 7: Setup Synk Token for the app code pipeline.
+
 Step 8: Review and Deploy Application Code.
+
 Step 9: Configure ArgoCD.
+
 Step 10: Set up the Monitoring for our EKS Cluster using Prometheus and Grafana.
+
 Step 11: Deploy Quiz Application using ArgoCD.
+
 Step 12: Creating an A-Record in AWS Route 53 Using ALB DNS.
+
 Step 13: Clean up.
+
 Conclusion
 
 # Project Overview:
