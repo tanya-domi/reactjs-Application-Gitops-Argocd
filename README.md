@@ -172,7 +172,8 @@ export ARGOCD_SERVER=`kubectl get svc argocd-server -n argocd -o json | jq --raw
 export ARGO_PWD=`kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d`
 echo $ARGO_PWD
 
-Step 10: Set up the Monitoring for our EKS Cluster using Prometheus and Grafana.
+Step 10
+Set up the Monitoring for our EKS Cluster using Prometheus and Grafana.
 We can monitor the Cluster Specifications and other necessary things.
 We installed monitoring using Helm Add all the helm repos, prometheus, grafana repo by using the below command
 
